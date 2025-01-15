@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Various Input Types</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Form</h2>
+        <form id="dataForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <div class="style-gender">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="Male" required> Male
+                <input type="radio" id="female" name="gender" value="Female" required> Female<br><br>
+            </div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="dropdown">Choose a Country:</label>
+            <select id="dropdown" name="country" required>
+                <option value="">--Select--</option>
+                <option value="USA">USA</option>
+                <option value="India">India</option>
+                <option value="UK">UK</option>
+                <option value="UK">Japan</option>
+                <option value="UK">China</option>
+            </select><br><br>
+
+            <label for="checkbox">Agree to Terms:</label>
+            <input type="checkbox" id="checkbox" name="agree" required> I agree to the terms<br><br>
+
+            <label for="resume">Upload Resume (PDF/Word):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf, .docx, .doc" required><br><br>
+
+            <label for="number">Age:</label>
+            <input type="number" id="number" name="age" min="18" max="100" required><br><br>
+
+            <label for="textInput">Text Input:</label>
+            <input type="text" id="textInput" name="textInput"><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <h3>Form Data:</h3>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Country</th>
+                    <th>Agree to Terms</th>
+                    <th>Resume</th>
+                    <th>Age</th>
+                    <th>Text Input</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <!-- Button to download HTML content -->
+        <button id="downloadHtmlBtn">GET HTML <i class="fa fa-copy"></i></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
